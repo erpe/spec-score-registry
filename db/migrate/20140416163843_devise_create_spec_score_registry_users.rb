@@ -13,7 +13,7 @@ class DeviseCreateSpecScoreRegistryUsers < ActiveRecord::Migration
       add_column :sc_users, :current_sign_in_ip, :string
       add_column :sc_users, :last_sign_in_ip, :string
       
-      add_index :sc_users, :email,                unique: true
+      #add_index :sc_users, :email,                unique: true
       add_index :sc_users, :reset_password_token, unique: true
 
     else
