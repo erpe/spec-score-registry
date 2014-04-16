@@ -1,7 +1,7 @@
 class DeviseCreateSpecScoreRegistryUsers < ActiveRecord::Migration
   def up
     if  ActiveRecord::Base.connection.table_exists? 'sc_users'
-      add_column :sc_users, :email, :string, null: false, default: ""
+      #add_column :sc_users, :email, :string, null: false, default: ""
       add_column :sc_users, :encrypted_password, :string,  null: false, default: ""
       add_column :sc_users, :reset_password_token, :string
       add_column :sc_users, :reset_password_token_sent_at, :date
