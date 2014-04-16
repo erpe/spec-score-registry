@@ -47,14 +47,14 @@ class DeviseCreateSpecScoreRegistryUsers < ActiveRecord::Migration
         # t.string   :unlock_token # Only if unlock strategy is :email or :both
         # t.datetime :locked_at
 
-
         t.timestamps
-    end
+      end
 
-    add_index :sc_users, :email,                unique: true
-    add_index :sc_users, :reset_password_token, unique: true
-    # add_index :spec_score_registry_users, :confirmation_token,   unique: true
-    # add_index :spec_score_registry_users, :unlock_token,         unique: true
+      add_index :sc_users, :email,                unique: true
+      add_index :sc_users, :reset_password_token, unique: true
+      # add_index :spec_score_registry_users, :confirmation_token,   unique: true
+      # add_index :spec_score_registry_users, :unlock_token,         unique: true
+    end
   end
 
   def down
