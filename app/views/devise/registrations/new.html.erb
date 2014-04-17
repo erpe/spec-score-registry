@@ -1,34 +1,44 @@
-<h2>Sign up</h2>
+<div class='intro'>
+  <div class='padding'>
+  <div class='col-md-6'> 
 
-<%= form_for(resource, as: resource_name, url: spec_score_registry.user_registration_path()) do |f| %>
-  <%= devise_error_messages! %>
+  <h2>Sign up</h2>
+  </div>
+  <div class='col-md-6'> 
+  <%= form_for(resource, as: resource_name, url: spec_score_registry.user_registration_path()) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class='form-group'>
-    <%= f.label :email %>
-    <%= f.email_field :email, 
+    <div class='form-group'>
+      <%= f.email_field :email, 
                       autofocus: true, 
                       required: true, 
-                      class: 'form-control' %>
-  </div>
+                      class: 'form-control input-lg',
+                      placeholder: 'email'%>
+                    
+    </div>
 
-  <div class='form-group'>
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off",
+    <div class='form-group'>
+      <%= f.password_field :password, autocomplete: "off",
                                     required: true , 
-                                    class: 'form-control'%>
-  </div>
+                                    class: 'form-control input-lg',
+                                    placeholder: 'password' %>
+    </div>
 
-  <div class='form-group'>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation,
+    <div class='form-group'>
+      <%= f.password_field :password_confirmation,
                           autocomplete: "off", 
                           required: true , 
-                          class: 'form-control'%>
-  </div>
+                          class: 'form-control input-lg',
+                          placeholder: 'password confirmation' %>
+    </div>
 
-  <div>
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class='form-group'>
+      <%= f.submit "Sign up", class: 'input-lg btn btn-primary btn-block btn-xl' %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+  </div>
+</div>
+</div>
+</div>
