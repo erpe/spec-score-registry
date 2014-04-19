@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spec_score_registry (0.0.1.pre.5)
+    spec_score_registry (0.0.1.pre.6)
       devise
       rails (~> 4.1.0)
 
