@@ -1,3 +1,7 @@
+require 'devise'
+require 'omniauth'
+require 'omniauth-github'
+
 module SpecScoreRegistry
   class Engine < ::Rails::Engine
     isolate_namespace SpecScoreRegistry

@@ -2,11 +2,16 @@ require_dependency "spec_score_registry/application_controller"
 
 module SpecScoreRegistry
   class DashboardsController < ApplicationController
+    before_action :authenticate_user!
+
     #before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
 
     # GET /dashboards
     def index
 
+    end
+
+    def show
     end
 
     
