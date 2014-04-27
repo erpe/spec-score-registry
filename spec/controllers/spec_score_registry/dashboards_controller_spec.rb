@@ -28,6 +28,10 @@ module SpecScoreRegistry
     # adjust the attributes here as well.
     let(:valid_attributes) { { "index" => "MyString" } }
 
+    before do
+      @user = User.create(email: 'me@example.com', password: '12345678')
+    end
+
     # This should return the minimal set of values that should be in the session
     # in order to pass any filters (e.g. authentication) defined in
     # DashboardsController. Be sure to keep this updated too.
@@ -35,7 +39,16 @@ module SpecScoreRegistry
     
     describe "GET show" do
       it 'assigns user as @user' do
+        sign_in(@user)
         get :show, {} 
+      end
+    end
+
+    describe "unauthenticated" do
+      it 'raises error' do
+        expect do
+          get :show, {}
+        end.to raise_error
       end
     end
   end

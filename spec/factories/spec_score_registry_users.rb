@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :spec_score_registry_user, :class => 'User' do
+    email { 'me@example.com' }
+
   end
 end
