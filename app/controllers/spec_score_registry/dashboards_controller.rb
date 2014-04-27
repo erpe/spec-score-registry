@@ -10,7 +10,6 @@ module SpecScoreRegistry
 
     def show
       @user = current_user
-      puts @user.inspect
     end
 
     private
